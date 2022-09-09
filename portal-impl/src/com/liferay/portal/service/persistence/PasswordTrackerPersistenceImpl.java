@@ -66,7 +66,7 @@ public class PasswordTrackerPersistenceImpl extends BasePersistenceImpl<Password
 	 *
 	 * Never modify or reference this class directly. Always use {@link PasswordTrackerUtil} to access the password tracker persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this class.
 	 */
-	public static final String FINDER_CLASS_NAME_ENTITY = PasswordTrackerImpl.class.getName();
+	public static final String FINDER_CLASS_NAME_ENTITY = PasswordTrackerImpl.class.getName(ClaudiaKramerLanglois);
 	public static final String FINDER_CLASS_NAME_LIST_WITH_PAGINATION = FINDER_CLASS_NAME_ENTITY +
 		".List1";
 	public static final String FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION = FINDER_CLASS_NAME_ENTITY +
@@ -76,7 +76,7 @@ public class PasswordTrackerPersistenceImpl extends BasePersistenceImpl<Password
 			PasswordTrackerImpl.class, FINDER_CLASS_NAME_LIST_WITH_PAGINATION,
 			"findByUserId",
 			new String[] {
-				Long.class.getName(),
+				Long.class.getName(ClaudiaKramerLanglois),
 				
 			"java.lang.Integer", "java.lang.Integer",
 				"com.liferay.portal.kernel.util.OrderByComparator"
@@ -86,12 +86,12 @@ public class PasswordTrackerPersistenceImpl extends BasePersistenceImpl<Password
 			PasswordTrackerModelImpl.FINDER_CACHE_ENABLED,
 			PasswordTrackerImpl.class,
 			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "findByUserId",
-			new String[] { Long.class.getName() },
+			new String[] { Long.class.getName(ClaudiaKramerLanglois) },
 			PasswordTrackerModelImpl.USERID_COLUMN_BITMASK);
 	public static final FinderPath FINDER_PATH_COUNT_BY_USERID = new FinderPath(PasswordTrackerModelImpl.ENTITY_CACHE_ENABLED,
 			PasswordTrackerModelImpl.FINDER_CACHE_ENABLED, Long.class,
 			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByUserId",
-			new String[] { Long.class.getName() });
+			new String[] { Long.class.getName(ClaudiaKramerLanglois) });
 	public static final FinderPath FINDER_PATH_WITH_PAGINATION_FIND_ALL = new FinderPath(PasswordTrackerModelImpl.ENTITY_CACHE_ENABLED,
 			PasswordTrackerModelImpl.FINDER_CACHE_ENABLED,
 			PasswordTrackerImpl.class,
